@@ -1,0 +1,35 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@better/auth": "workspace:*",
+    "@better/ui": "workspace:*",
+    "@radix-ui/react-label": "^2.1.8",
+    "@radix-ui/react-separator": "^1.1.8",
+    "@tanstack/react-form": "^1.27.3",
+    "@tanstack/react-query": "^5.90.12",
+    "babel-plugin-react-compiler": "^1.0.0",
+    "better-auth": "catalog:",
+    "dotenv": "catalog:",
+    "next": "^16.0.10",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.10",
+    "@types/node": "^20",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "tailwindcss": "^4.1.10",
+    "typescript": "catalog:",
+    "@tanstack/react-query-devtools": "^5.91.1",
+    "@better/config": "workspace:*"
+  }
+}
