@@ -5,6 +5,9 @@
     ".": {
       "default": "./src/index.ts"
     },
+    "./migrate": {
+      "default": "./src/migrate.ts"
+    },
     "./*": {
       "default": "./src/*.ts"
     }
@@ -13,7 +16,7 @@
     "db:push": "drizzle-kit push",
     "db:generate": "drizzle-kit generate",
     "db:studio": "drizzle-kit studio",
-    "db:migrate": "drizzle-kit migrate",
+    "db:migrate": "bun run src/migrate.ts",
     "db:start": "docker compose up -d",
     "db:watch": "docker compose up",
     "db:stop": "docker compose stop",

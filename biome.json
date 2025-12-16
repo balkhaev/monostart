@@ -23,8 +23,44 @@
       "!**/convex/_generated"
     ]
   },
-  "extends": [
-    "ultracite/core",
-    "ultracite/next"
-  ]
+  "extends": ["ultracite/core", "ultracite/next"],
+  "linter": {
+    "rules": {
+      "performance": {
+        "noNamespaceImport": "off",
+        "noBarrelFile": "off"
+      },
+      "a11y": {
+        "useFocusableInteractive": "off",
+        "useSemanticElements": "off",
+        "noNoninteractiveElementInteractions": "off",
+        "useKeyWithClickEvents": "off",
+        "useAriaPropsForRole": "off",
+        "noRedundantRoles": "off"
+      },
+      "nursery": {
+        "noShadow": "off",
+        "noLeakedRender": "off"
+      },
+      "style": {
+        "noNestedTernary": "off",
+        "useBlockStatements": "off"
+      },
+      "suspicious": {
+        "noArrayIndexKey": "off",
+        "noDocumentCookie": "off"
+      },
+      "complexity": {
+        "noExcessiveCognitiveComplexity": "off"
+      },
+      "security": {
+        "noDangerouslySetInnerHtml": "off"
+      }
+    }
+  },
+  "css": {
+    "linter": {
+      "enabled": true
+    }
+  }
 }

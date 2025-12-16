@@ -1,12 +1,12 @@
-import "dotenv/config"
-import { auth } from "@better/auth"
-import { Hono } from "hono"
-import { cors } from "hono/cors"
-import { logger } from "hono/logger"
+import "dotenv/config";
+import { auth } from "@better/auth";
+import { Hono } from "hono";
+import { cors } from "hono/cors";
+import { logger } from "hono/logger";
 
-const app = new Hono()
+const app = new Hono();
 
-app.use(logger())
+app.use(logger());
 app.use(
   "/*",
   cors({
@@ -15,15 +15,13 @@ app.use(
     allowHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
-)
+);
 
-app.on(["POST", "GET"], "/api/auth/*", (c) => auth.handler(c.req.raw))
+app.on(["POST", "GET"], "/api/auth/*", (c) => auth.handler(c.req.raw));
 
-app.get("/", (c) => {
-  return c.text("OK")
-})
+app.get("/", (c) => c.text("OK"));
 
 export default {
   port: Number(process.env.PORT) || 3001,
   fetch: app.fetch,
-}
+};

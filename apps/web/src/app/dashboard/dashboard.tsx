@@ -1,10 +1,10 @@
-"use client";
-import { authClient } from "@/lib/auth-client";
+"use client"
+import type { authClient } from "@/lib/auth-client"
 
 export default function Dashboard({
-	session,
+  session,
 }: {
-	session: typeof authClient.$Infer.Session;
+  session: typeof authClient.$Infer.Session
 }) {
-	return <></>;
+  return <div>Welcome, {session.user.name}</div>
 }
